@@ -20,7 +20,7 @@ show_info(arr2)
 
 arr3 = np.full((3,3),9)
 print(f"{10*'='}{arr3}{10*'='}")
-show_info(arr2)
+show_info(arr3)
 
 print(10*"=")
 
