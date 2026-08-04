@@ -26,3 +26,14 @@ sales = np.array([
 splited = np.hsplit(sales,3)
 for i in range(3):
     print(np.mean(splited[i]))
+
+
+data = np.arange(1,13).reshape(3,4)
+
+print(data)
+
+print("vsplit:")
+print(np.vsplit(data,3))
+
+print("hsplit:")
+print(np.hsplit(data,2))
