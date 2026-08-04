@@ -22,8 +22,8 @@ B =\
  [7,8]
 ]
 
-print("anxis= 0 ","\n",np.concatenate((A,B),axis=0))
-print("anxis= 1 ","\n",np.concatenate((A,B),axis=1))
+print("axis= 0 ","\n",np.concatenate((A,B),axis=0))
+print("axis= 1 ","\n",np.concatenate((A,B),axis=1))
 
 
 names = np.array(["Ali", "Sara", "Reza", "Mina"])
@@ -40,3 +40,4 @@ mar = np.array([210,250,190])
 print("there month sales")
 three = np.column_stack((jan,feb,mar))
 print(three)
+print(np.vstack((jan,feb,mar)))
