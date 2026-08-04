@@ -10,3 +10,4 @@ wheels/
 .venv
 
 student_scores.csv
+students_scores.csv
