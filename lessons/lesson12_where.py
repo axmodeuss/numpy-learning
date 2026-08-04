@@ -15,8 +15,6 @@ print(ages_above18)
 
 import pandas as pd
 
-import pandas as pd
-
 df = pd.DataFrame({
     "score":[40,70,90,30]
 })
