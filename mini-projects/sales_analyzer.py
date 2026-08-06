@@ -29,7 +29,7 @@ print(f"{10*"="}max and min{10*"="}")
 print(f"Max: \n {sales.max(axis=0)}\nMin:\n{sales.min(axis=0)}")
 
 print(f"{10*"="}worst and best month{10*"="}")
-print(f"best : {np.argmax(sum_month)}\nworst: {np.argmin(sum_month)}")
+print(f"best : {np.argmax(sum_month)+1}\nworst: {np.argmin(sum_month)+1}")
 
 # print(f"{10*"="}monthes with sales more than 3000{10*"="}")
 # print(sum_month[(np.where(sum_month>3000))])
@@ -60,7 +60,7 @@ income_dict = {
 print(income_dict)
 
 print(f"{10*'='} 13) np.where {10*'='}")
-revenue_100001 = np.where(income>100000,"Excellent","Normal")
+revenue_100001 = np.where(income>80000,"Excellent","Normal")
 print(revenue_100001)
 
 
@@ -75,7 +75,13 @@ df = pd.DataFrame(sales,columns=["Product_A",
 "Product_E"])
 df["Revenue"] = income
 df["Status"] = revenue_100001
-df["Month"] = ["jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+months = [
+    "Jan","Feb","Mar","Apr",
+    "May","Jun","Jul","Aug",
+    "Sep","Oct","Nov","Dec"
+]
+
+df.insert(0, "Month", months)
 print(df)
 print(df.head())
 print(df.info())
