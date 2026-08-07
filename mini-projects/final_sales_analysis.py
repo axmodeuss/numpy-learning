@@ -19,3 +19,24 @@ print("ndim :", sales.ndim)
 print("="*10,"DATA SAMPLE","="*10)
 
 print(sales[:5])
+
+total_sales = sales.sum()
+print("Total_sales : ",total_sales)
+
+product_sales = sales.sum(axis=0)
+
+print(product_sales)
+
+
+best_product = np.argmax(product_sales)
+
+print(best_product)
+products = np.array([
+    "Laptop",
+    "Mouse",
+    "Keyboard",
+    "Monitor",
+    "Phone"
+])
+
+print(products[best_product])
